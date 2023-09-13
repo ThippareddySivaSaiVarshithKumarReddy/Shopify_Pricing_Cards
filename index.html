@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="shopify.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top header">
+        <div class="d-none d-md-block">
+            <img src="https://res.cloudinary.com/dx3vswge0/image/upload/v1694491508/shopify_wonnce.png" class="shopify-logo" />
+        </div>
+        <div class="d-block d-md-none">
+            <img src="https://res.cloudinary.com/dx3vswge0/image/upload/v1694491508/shopify_wonnce.png" class="shopify-logo-sm" />
+        </div>
+        <div class="d-lg-none d-block ml-auto pr-3">
+            <button class="start-trail-button2 ">Start free trail</button>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="True" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse p-0 m-0" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown active pr-3">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Solutions
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item active pr-3">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item dropdown active pr-3">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Resources
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="login-button pr-3" type="submit">Login</button>
+                <button class="start-trail-button" type="submit">Start Free Trail</button>
+            </form>
+        </div>
+    </nav>
+    <div class="pt-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="d-flex flex-row justify-content-center col-12 pb-5">
+                    <div class="pay-section d-none d-md-block">
+                        <button class="pay-month-button pay-active-button" id="payMonth">Pay Monthly</button>
+                        <button class="pay-year-button" id="payYear">Pay Yearly (Save 25%)</button>
+                    </div>
+                    <div class="pay-section d-block d-md-none">
+                        <button class="sm-pay-month-button pay-active-button" value="Click to start" id="payMonthsm">Pay Monthly</button>
+                        <button class="sm-pay-year-button" id="payYearsm">Pay Yearly (Save 25%)</button>
+                    </div>
+                </div>
+                <div class="d-block d-md-none col-4 pay-button-container-sm">
+                    <button class="active-button" id="BasicSm" onclick="Basic()">Basic</button>
+                </div>
+                <div class="d-block d-md-none col-4 pay-button-container-sm">
+                    <button id="ShopifySm" onclick="Shopify()">Shopify</button>
+                </div>
+                <div class="d-block d-md-none col-4 pay-button-container-sm">
+                    <button id="AdvancedSm" onclick="Advanced()">Advanced</button>
+                </div>
+                <div class="col-md-4 p-2 d-none" id="basicYear">
+                    <div class="card">
+                        <div class="card-head p-4">
+                            <h1>Basic</h1>
+                            <p class="card-head-paragraph1">FOR INDIVIDUALS & SMALL BUSINESSES</p>
+                            <p class="card-head-paragraph2">Everything you need to create your store, ship products, and process payments</p>
+                            <p class="card-head-paragraph3"><span class="span-rupees">₹1,499</span>INR/mon</p>
+                        </div>
+                        <div class="text-center card-center">
+                            <h5>Get your first 3 months for ₹20/mo</h5>
+                        </div>
+                        <div class="p-4 pt-5">
+                            <h5>What's included on Basic</h5>
+                            <ul class="card-bullets">
+                                <li class="p-0"><i class="fas fa-check pr-4"></i>Basic reports</li>
+                                <li><i class="fas fa-check pr-4"></i>Up to 1,000 inventory locations</li>
+                                <li><i class="fas fa-check pr-4"></i>2 staff accounts</li>
+                            </ul>
+                        </div>
+                        <div class="text-center p-4">
+                            <button class="card-button">Try For Free</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 p-2 d-none" id="shopifyYear">
+                    <div class="card">
+                        <div class="card-head p-4">
+                            <h1>Shopify</h1>
+                            <p class="card-head-paragraph1">FOR SMALL BUSINESSES</p>
+                            <p class="card-head-paragraph2">Level up your business with professional reporting and more staff accounts</p>
+                            <p class="card-head-paragraph3"><span class="span-rupees">₹5,599</span>INR/mon</p>
+                        </div>
+                        <div class="text-center card-center">
+                            <h5>Get your first 3 months for ₹20/mo</h5>
+                        </div>
+                        <div class="p-4 pt-5">
+                            <h5>What's included on Shopify</h5>
+                            <ul class="card-bullets">
+                                <li class="p-0"><i class="fas fa-check pr-4"></i>Professional reports</li>
+                                <li><i class="fas fa-check pr-4"></i>Up to 1,000 inventory locations</li>
+                                <li><i class="fas fa-check pr-4"></i>5 staff accounts</li>
+                            </ul>
+                        </div>
+                        <div class="text-center p-4">
+                            <button class="card-button">Try For Free</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 p-2 d-none" id="advancedYear">
+                    <div class="card">
+                        <div class="card-head p-4">
+                            <h1>Advanced</h1>
+                            <p class="card-head-paragraph1">FOR MEDIUM TO LARGE BUSINESSES</p>
+                            <p class="card-head-paragraph2">Get the best of Shopify with custom reporting and our lowest transaction fees</p>
+                            <p class="card-head-paragraph3"><span class="span-rupees">₹22,680</span>INR/mon</p>
+                        </div>
+                        <div class="text-center card-center">
+                            <h5>Get your first 3 months for ₹20/mo</h5>
+                        </div>
+                        <div class="p-4 pt-5">
+                            <h5>What's included on Advanced</h5>
+                            <ul class="card-bullets">
+                                <li class="p-0"><i class="fas fa-check pr-4"></i>Custom report builder</li>
+                                <li><i class="fas fa-check pr-4"></i>Up to 1,000 inventory locations</li>
+                                <li><i class="fas fa-check pr-4"></i>15 staff accounts</li>
+                            </ul>
+                        </div>
+                        <div class="text-center p-4">
+                            <button class="card-button">Try For Free</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 p-2 d-none" id="basicMonth">
+                    <div class="card">
+                        <div class="card-head p-4">
+                            <h1>Basic</h1>
+                            <p class="card-head-paragraph1">FOR INDIVIDUALS & SMALL BUSINESSES</p>
+                            <p class="card-head-paragraph2">Everything you need to create your store, ship products, and process payments</p>
+                            <p class="card-head-paragraph3"><span class="span-rupees">₹1,994</span>INR/mon</p>
+                        </div>
+                        <div class="text-center card-center">
+                            <h5>Get your first 3 months for ₹20/mo</h5>
+                        </div>
+                        <div class="p-4 pt-5">
+                            <h5>What's included on Basic</h5>
+                            <ul class="card-bullets">
+                                <li class="p-0"><i class="fas fa-check pr-4"></i>Basic reports</li>
+                                <li><i class="fas fa-check pr-4"></i>Up to 1,000 inventory locations</li>
+                                <li><i class="fas fa-check pr-4"></i>2 staff accounts</li>
+                            </ul>
+                        </div>
+                        <div class="text-center p-4">
+                            <button class="card-button">Try For Free</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 p-2 d-none" id="shopifyMonth">
+                    <div class="card">
+                        <div class="card-head p-4">
+                            <h1>Shopify</h1>
+                            <p class="card-head-paragraph1">FOR SMALL BUSINESSES</p>
+                            <p class="card-head-paragraph2">Level up your business with professional reporting and more staff accounts</p>
+                            <p class="card-head-paragraph3"><span class="span-rupees">₹7,447</span>INR/mon</p>
+                        </div>
+                        <div class="text-center card-center">
+                            <h5>Get your first 3 months for ₹20/mo</h5>
+                        </div>
+                        <div class="p-4 pt-5">
+                            <h5>What's included on Shopify</h5>
+                            <ul class="card-bullets">
+                                <li class="p-0"><i class="fas fa-check pr-4"></i>Professional reports</li>
+                                <li><i class="fas fa-check pr-4"></i>Up to 1,000 inventory locations</li>
+                                <li><i class="fas fa-check pr-4"></i>5 staff accounts</li>
+                            </ul>
+                        </div>
+                        <div class="text-center p-4">
+                            <button class="card-button">Try For Free</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 p-2 d-none" id="advancedMonth">
+                    <div class="card">
+                        <div class="card-head p-4">
+                            <h1>Advanced</h1>
+                            <p class="card-head-paragraph1">FOR MEDIUM TO LARGE BUSINESSES</p>
+                            <p class="card-head-paragraph2">Get the best of Shopify with custom reporting and our lowest transaction fees</p>
+                            <p class="card-head-paragraph3"><span class="span-rupees">₹30,164</span>INR/mon</p>
+                        </div>
+                        <div class="text-center card-center">
+                            <h5>Get your first 3 months for ₹20/mo</h5>
+                        </div>
+                        <div class="p-4 pt-5">
+                            <h5>What's included on Advanced</h5>
+                            <ul class="card-bullets">
+                                <li class="p-0"><i class="fas fa-check pr-4"></i>Custom report builder</li>
+                                <li><i class="fas fa-check pr-4"></i>Up to 1,000 inventory locations</li>
+                                <li><i class="fas fa-check pr-4"></i>15 staff accounts</li>
+                            </ul>
+                        </div>
+                        <div class="text-center p-4">
+                            <button class="card-button">Try For Free</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none d-md-none" id="basicYearsm">
+                    <div class="">
+                        <div class="text-center most-popular-text pt-2">
+                            <h6>MOST POPULAR</h6>
+                        </div>
+                        <div class="card-head p-4">
+                            <h1>Basic</h1>
+                            <p class="card-head-paragraph1">FOR INDIVIDUALS & SMALL BUSINESSES</p>
+                            <p class="card-head-paragraph2">Everything you need to create your store, ship products, and process payments</p>
+                            <p class="card-head-paragraph3"><span class="span-rupees">₹1,499</span>INR/mon</p>
+                        </div>
+                        <div class="text-center card-center">
+                            <h5>Get your first 3 months for ₹20/mo</h5>
+                        </div>
+                        <div class="p-4 pt-5">
+                            <h5>What's included on Basic</h5>
+                            <ul class="card-bullets">
+                                <li class="p-0"><i class="fas fa-check pr-4"></i>Basic reports</li>
+                                <li><i class="fas fa-check pr-4"></i>Up to 1,000 inventory locations</li>
+                                <li><i class="fas fa-check pr-4"></i>2 staff accounts</li>
+                            </ul>
+                        </div>
+                        <div class="text-center p-4">
+                            <button class="card-button">Try For Free</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-2 d-none d-md-none" id="shopifyYearsm">
+                    <div class="">
+                        <div class="card-head p-4">
+                            <h1>Shopify</h1>
+                            <p class="card-head-paragraph1">FOR SMALL BUSINESSES</p>
+                            <p class="card-head-paragraph2">Level up your business with professional reporting and more staff accounts</p>
+                            <p class="card-head-paragraph3"><span class="span-rupees">₹5,599</span>INR/mon</p>
+                        </div>
+                        <div class="text-center card-center">
+                            <h5>Get your first 3 months for ₹20/mo</h5>
+                        </div>
+                        <div class="p-4 pt-5">
+                            <h5>What's included on Shopify</h5>
+                            <ul class="card-bullets">
+                                <li class="p-0"><i class="fas fa-check pr-4"></i>Professional reports</li>
+                                <li><i class="fas fa-check pr-4"></i>Up to 1,000 inventory locations</li>
+                                <li><i class="fas fa-check pr-4"></i>5 staff accounts</li>
+                            </ul>
+                        </div>
+                        <div class="text-center p-4">
+                            <button class="card-button">Try For Free</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-2 d-none d-md-none" id="advancedYearsm">
+                    <div class="">
+                        <div class="card-head p-4">
+                            <h1>Advanced</h1>
+                            <p class="card-head-paragraph1">FOR MEDIUM TO LARGE BUSINESSES</p>
+                            <p class="card-head-paragraph2">Get the best of Shopify with custom reporting and our lowest transaction fees</p>
+                            <p class="card-head-paragraph3"><span class="span-rupees">₹22,680</span>INR/mon</p>
+                        </div>
+                        <div class="text-center card-center">
+                            <h5>Get your first 3 months for ₹20/mo</h5>
+                        </div>
+                        <div class="p-4 pt-5">
+                            <h5>What's included on Advanced</h5>
+                            <ul class="card-bullets">
+                                <li class="p-0"><i class="fas fa-check pr-4"></i>Custom report builder</li>
+                                <li><i class="fas fa-check pr-4"></i>Up to 1,000 inventory locations</li>
+                                <li><i class="fas fa-check pr-4"></i>15 staff accounts</li>
+                            </ul>
+                        </div>
+                        <div class="text-center p-4">
+                            <button class="card-button">Try For Free</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none d-md-none" id="basicMonthsm">
+                    <div class="">
+                        <div class="text-center most-popular-text pt-2">
+                            <h6>MOST POPULAR</h6>
+                        </div>
+                        <div class="card-head p-4">
+                            <h1>Basic</h1>
+                            <p class="card-head-paragraph1">FOR INDIVIDUALS & SMALL BUSINESSES</p>
+                            <p class="card-head-paragraph2">Everything you need to create your store, ship products, and process payments</p>
+                            <p class="card-head-paragraph3"><span class="span-rupees">₹1,994</span>INR/mon</p>
+                        </div>
+                        <div class="text-center card-center">
+                            <h5>Get your first 3 months for ₹20/mo</h5>
+                        </div>
+                        <div class="p-4 pt-5">
+                            <h5>What's included on Basic</h5>
+                            <ul class="card-bullets">
+                                <li class="p-0"><i class="fas fa-check pr-4"></i>Basic reports</li>
+                                <li><i class="fas fa-check pr-4"></i>Up to 1,000 inventory locations</li>
+                                <li><i class="fas fa-check pr-4"></i>2 staff accounts</li>
+                            </ul>
+                        </div>
+                        <div class="text-center p-4">
+                            <button class="card-button">Try For Free</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-2 d-none d-md-none" id="shopifyMonthsm">
+                    <div class="">
+                        <div class="card-head p-4">
+                            <h1>Shopify</h1>
+                            <p class="card-head-paragraph1">FOR SMALL BUSINESSES</p>
+                            <p class="card-head-paragraph2">Level up your business with professional reporting and more staff accounts</p>
+                            <p class="card-head-paragraph3"><span class="span-rupees">₹7,447</span>INR/mon</p>
+                        </div>
+                        <div class="text-center card-center">
+                            <h5>Get your first 3 months for ₹20/mo</h5>
+                        </div>
+                        <div class="p-4 pt-5">
+                            <h5>What's included on Shopify</h5>
+                            <ul class="card-bullets">
+                                <li class="p-0"><i class="fas fa-check pr-4"></i>Professional reports</li>
+                                <li><i class="fas fa-check pr-4"></i>Up to 1,000 inventory locations</li>
+                                <li><i class="fas fa-check pr-4"></i>5 staff accounts</li>
+                            </ul>
+                        </div>
+                        <div class="text-center p-4">
+                            <button class="card-button">Try For Free</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-2 d-none d-md-none" id="advancedMonthsm">
+                    <div class="">
+                        <div class="card-head p-4">
+                            <h1>Advanced</h1>
+                            <p class="card-head-paragraph1">FOR MEDIUM TO LARGE BUSINESSES</p>
+                            <p class="card-head-paragraph2">Get the best of Shopify with custom reporting and our lowest transaction fees</p>
+                            <p class="card-head-paragraph3"><span class="span-rupees">₹30,164</span>INR/mon</p>
+                        </div>
+                        <div class="text-center card-center">
+                            <h5>Get your first 3 months for ₹20/mo</h5>
+                        </div>
+                        <div class="p-4 pt-5">
+                            <h5>What's included on Advanced</h5>
+                            <ul class="card-bullets">
+                                <li class="p-0"><i class="fas fa-check pr-4"></i>Custom report builder</li>
+                                <li><i class="fas fa-check pr-4"></i>Up to 1,000 inventory locations</li>
+                                <li><i class="fas fa-check pr-4"></i>15 staff accounts</li>
+                            </ul>
+                        </div>
+                        <div class="text-center p-4">
+                            <button class="card-button">Try For Free</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="shopify.js"></script>
+</body>
+
+</html>
